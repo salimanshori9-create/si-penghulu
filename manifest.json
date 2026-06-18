@@ -14,14 +14,14 @@
   ],
   "screenshots": [
     {
-      "src": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=720&auto=format&fit=crop",
+      "src": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=720&h=1280",
       "sizes": "720x1280",
       "type": "image/jpeg",
       "form_factor": "narrow",
       "label": "Kalkulator Iddah & Waris Seluler"
     },
     {
-      "src": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1280&auto=format&fit=crop",
+      "src": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1280&h=720",
       "sizes": "1280x720",
       "type": "image/jpeg",
       "form_factor": "wide",
@@ -32,5 +32,22 @@
   "background_color": "#065f46",
   "theme_color": "#065f46",
   "display": "standalone",
-  "orientation": "portrait"
+  "display_override": ["standalone", "fullscreen", "minimal-ui"],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "orientation": "portrait",
+  "shortcuts": [
+    {
+      "name": "Kalkulator Iddah",
+      "short_name": "Iddah",
+      "url": "./index.html#tab-iddah",
+      "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/2913/2913604.png", "sizes": "512x512" }]
+    },
+    {
+      "name": "Kalkulator Waris",
+      "short_name": "Waris",
+      "url": "./index.html#tab-waris",
+      "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/2913/2913604.png", "sizes": "512x512" }]
+    }
+  ]
 }
