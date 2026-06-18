@@ -2,12 +2,30 @@
   "short_name": "SI-Penghulu",
   "name": "SI-PENGHULU: Iddah, Waris & Wali",
   "description": "Kalkulator Iddah, Waris, dan Wali Nikah Syariah Berdasarkan PMA No. 30 Tahun 2024",
+  "id": "/si-penghulu/",
+  "categories": ["utilities", "productivity", "education"],
   "icons": [
     {
       "src": "https://cdn-icons-png.flaticon.com/512/2913/2913604.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=720&auto=format&fit=crop",
+      "sizes": "720x1280",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Kalkulator Iddah & Waris Seluler"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1280&auto=format&fit=crop",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Kalkulator Iddah & Waris Tablet"
     }
   ],
   "start_url": "./index.html",
