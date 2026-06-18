@@ -6,13 +6,13 @@
   "categories": ["utilities", "productivity", "education"],
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/2913/2913604.png",
+      "src": "icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/2913/2913604.png",
+      "src": "icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
@@ -47,13 +47,25 @@
       "name": "Kalkulator Iddah",
       "short_name": "Iddah",
       "url": "./index.html#tab-iddah",
-      "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/2913/2913604.png", "sizes": "512x512", "type": "image/png" }]
+      "icons": [
+        { 
+          "src": "icons/shortcut-96x96.png", 
+          "sizes": "96x96", 
+          "type": "image/png" 
+        }
+      ]
     },
     {
       "name": "Kalkulator Waris",
       "short_name": "Waris",
       "url": "./index.html#tab-waris",
-      "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/2913/2913604.png", "sizes": "512x512", "type": "image/png" }]
+      "icons": [
+        { 
+          "src": "icons/shortcut-96x96.png", 
+          "sizes": "96x96", 
+          "type": "image/png" 
+        }
+      ]
     }
   ]
 }
