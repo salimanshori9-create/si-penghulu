@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Sistem Informasi Iddah, Waris & Wali (SI-PENGHULU)</title>
   
-  <!-- MANIFEST & MOBILE CAPABILITIES FOR PWA -->
+  <!-- MANIFEST & KEMAMPUAN MOBILE UNTUK PWA -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#065f46">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="SI-Penghulu">
-  <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/2913/2913604.png">
+  <!-- LOGO KUSTOM UNTUK IPHONE/IOS -->
+  <link class="rounded-lg" rel="apple-touch-icon" href="logo.png">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -44,8 +45,9 @@
   <!-- TOP BAR KEPALA APLIKASI -->
   <header class="bg-gradient-to-r from-emerald-800 via-emerald-700 to-teal-800 text-white shadow-md sticky top-0 z-40 px-4 py-3.5 flex items-center justify-between">
     <div class="flex items-center space-x-3">
-      <div class="bg-emerald-600/50 p-2 rounded-xl border border-emerald-400/30">
-        <i class="fa-solid fa-mosque text-xl text-amber-300"></i>
+      <!-- LOGO INTEGRASI DENGAN HEADER -->
+      <div class="bg-white/10 p-1.5 rounded-xl border border-white/20 flex items-center justify-center">
+        <img src="logo.png" alt="Logo SI-PENGHULU" class="w-8 h-8 object-contain rounded-lg" onerror="this.outerHTML='<i class=&quot;fa-solid fa-mosque text-xl text-amber-300&quot;></i>'">
       </div>
       <div>
         <h1 class="font-bold text-base tracking-wide">SI-PENGHULU</h1>
@@ -794,7 +796,7 @@
         iconMati.className = "fa-solid fa-heart-crack text-emerald-600 text-base mb-1";
         
         lblHidup.className = "flex items-center justify-center p-3 rounded-xl border-2 border-slate-200 cursor-pointer hover:bg-slate-50 text-slate-600 transition-all duration-200 relative";
-        iconHidup.className = "fa-solid fa-gavel text-slate-400 text-base mb-1";
+        iconHidup.className = "fa-solid fa-gavel text-emerald-600 text-base mb-1";
 
         optQobla.classList.add('hidden');
         const checkedKondisi = document.querySelector('input[name="iddah-kondisi"]:checked');
@@ -1542,7 +1544,7 @@ _Dihitung via Aplikasi SI-PENGHULU Syariah_`;
             jenisWaliHeader = "WALI HAKIM / WAKALAH WALI";
             waliFinalSiapa = "Bisa Menggunakan Taukil Wali atau Wali Hakim Jauh";
             solusiTindakan = "Opsional: Taukil Wali di KUA Asal Wali ATAU Menggunakan Wali Hakim";
-            pmaProsedur = `Berdasarkan ketentuan Wali Ghaib PMA No. 30 Tahun 2024: Jika ${namaWaliInput} berada di luar kota/luar negeri yang jaraknya melebihi 2 marhalah (±92.5 KM) dan tidak dapat hadir, yang bersangkutan dapat melakukan Taukil Wali (Wakalah) di KUA setempat tempat ia berada. Surat Wakalah tersebut dikirimkan ke KUA tempat pernikahan. Jika tidak memungkinkan, pernikahan dapat menggunakan Wali Hakim atas dasar kedudukan Wali Ghaib.`;
+            pmaProsedur = `Berdasarkan ketentuan Wali Ghaib PMA No. 30 Tahun 2024: Jika ${namaWaliInput} berada di luar kota/luar negeri yang jaraknya melebihi 2 marhalah (sekitar 92.5 KM) dan tidak dapat hadir, yang bersangkutan dapat melakukan Taukil Wali (Wakalah) di KUA setempat tempat ia berada. Surat Wakalah tersebut dikirimkan ke KUA tempat pernikahan. Jika tidak memungkinkan, pernikahan dapat menggunakan Wali Hakim atas dasar kedudukan Wali Ghaib.`;
             break;
 
           case "mafqud":
@@ -1618,21 +1620,6 @@ _Dianalisis via Aplikasi SI-PENGHULU Syariah_`;
       document.body.removeChild(el);
 
       showToast("Analisis Wali berhasil disalin!");
-    }
-
-    function simpanKasusWali() {
-      if (!currentCalculation || currentCalculation.type !== 'wali') return;
-
-      const isExist = savedCases.some(c => c.timestamp === currentCalculation.timestamp);
-      if (isExist) {
-        showToast("Kasus sudah disimpan sebelumnya!", false);
-        return;
-      }
-
-      savedCases.unshift({...currentCalculation});
-      localStorage.setItem('si_penghulu_cases', JSON.stringify(savedCases));
-      updateRiwayatBadge();
-      showToast("Kasus Analisis Wali berhasil disimpan!");
     }
 
     // =====================================
