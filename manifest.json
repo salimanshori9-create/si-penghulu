@@ -6,7 +6,7 @@
   "categories": ["utilities", "productivity", "education"],
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/2913/2913604.png",
+      "src": "logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -41,13 +41,13 @@
       "name": "Kalkulator Iddah",
       "short_name": "Iddah",
       "url": "./index.html#tab-iddah",
-      "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/2913/2913604.png", "sizes": "512x512" }]
+      "icons": [{ "src": "logo.png", "sizes": "512x512" }]
     },
     {
       "name": "Kalkulator Waris",
       "short_name": "Waris",
       "url": "./index.html#tab-waris",
-      "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/2913/2913604.png", "sizes": "512x512" }]
+      "icons": [{ "src": "logo.png", "sizes": "512x512" }]
     }
   ]
 }
